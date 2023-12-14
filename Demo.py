@@ -13,3 +13,7 @@ y = 25
 z = x+y
 print(z)
 
+#Casting 
+name = str(45)
+print(name)
+print(type(name))   #to get name datatype  
