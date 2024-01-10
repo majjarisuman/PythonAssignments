@@ -41,4 +41,4 @@
 # print(bool2)      # 0.0
 
 # bool3 = float(bool("True"))
-# print(bool3)        # 1.0
+# print(bool3)        # 1.0 

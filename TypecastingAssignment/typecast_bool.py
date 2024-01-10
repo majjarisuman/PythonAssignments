@@ -48,7 +48,3 @@
 
 # str4 = bool("123")
 # print(str4)   #True
-
-
-
-
