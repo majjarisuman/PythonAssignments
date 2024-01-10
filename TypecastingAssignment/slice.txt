@@ -1,0 +1,34 @@
+## Slice
+
+str1 = "Python Course"
+print(len(str1))   # len = 13 -- 0 to 12 +ve  # -1 to -12  -ve
+print(str1[13])        #IndexError: string index out of range
+print(str1[13:50:1])       #Empty
+print(str1[13:50])       #Empty
+print(str1[0:14])       #Python Course
+print(str1[0:14:-1])    #Empty
+print(str1[-10 : 10])   #hon Cou
+print(str1[-3:-10])     #Empty  
+print(str1[1:-1])       #ython Cours
+print(str1[12])         # e
+print(str1[-13])        #p
+print(str1[-5:2])       #empty
+print(str1[-5:2:-1])      #oC noh
+print(str1[-1:2])         #Empty
+print(str1[-1:2:-2])         #ero o
+print(str1[2:-1:-2])         #Empty 
+print(str1[1:12:1:2])       #SyntaxError: invalid syntax    #added one extra step.
+print(str1[-1::])           # e
+print(str1[-1::1])           # e 
+print(str1[-4:-1:1])        #urs
+print(str1[-4:-1:-1])         #Empty
+print(str1[0:19:1])            #Python Course
+print(str1[0:19:3])           #Ph ue
+print(str1[10:-10])           #empty
+print(str1[10:-10:-1])          #ruoC no
+print(str1[10:-10:1])         # Empty
+print(str1[-6:15])               # Course
+print(str1[-6:-1])              # Cours
+print(str1[-6:-1-1])            # Cour       
+print(str1[-6:-1+1])            # Empty 
+print(str1[-6:])                 #Course  
