@@ -65,3 +65,7 @@ str1 = "Python Course"
 
 # print(str1[-6:])                 #Course
 
+# print(str1[5:19:0])             #ValueError: slice step cannot be zero
+
+# print(str1[5:19])               # n Course
+
