@@ -1,0 +1,264 @@
+#----------- List Datatype-----------------------------
+ 
+# List Represent a group of values as single entity.
+# List is mutable datatype. 
+# Mutable means we can add,update,delete elements after list created.
+# Duplicates are allowed in list.
+# Insertion order is preserved.
+# Indexing allowed.
+# Slicing Allowed.
+# List is Heterogeneous (Diff datatype values applicable.).
+# List Should be enclosed within Square Brackets [].
+
+# #Taking Empty List
+# l = []
+
+# #Printing datatype of list.
+# print(type(l))    #<class 'list'>
+
+# #appending elements in existing list.
+# l.append(30)
+# l.append(40)
+# l.append(20)
+# l.append(10)
+
+# #printing list values
+# print(l)           # [30, 40, 20, 10]
+
+# # #list can be add different datatype values
+# l.append("Rohit")
+# l.append(45)
+# l.append(True)
+# l.append(200.3)
+
+## print a list
+# print(l)       # [30, 40, 20, 10, 'Rohit', 45, True, 200.3]
+
+## arthimetic operations in list
+# print("l+l =",l+l)    #l+l = [30, 40, 20, 10, 'Rohit', 45, True, 200.3, 30, 40, 20, 10, 'Rohit', 45, True, 200.3]
+
+# print(l*l)   #TypeError: can't multiply sequence by non-int of type 'list'
+
+lst = [10,20,"rohit",45.5]
+# print(lst*3)
+# #o/p:- [10, 20, 'rohit', 45.5, 10, 20, 'rohit', 45.5, 10, 20, 'rohit', 45.5]
+
+# print(lst+lst)    #[10, 20, 'rohit', 45.5, 10, 20, 'rohit', 45.5]
+
+# print(lst*lst)   #TypeError: can't multiply sequence by non-int of type 'list'
+
+# print(lst-lst)   #TypeError: unsupported operand type(s) for -: 'list' and 'list'
+
+# print(lst%lst)    #TypeError: unsupported operand type(s) for %: 'list' and 'list'
+
+# print(lst/lst)     #TypeError: unsupported operand type(s) for /: 'list' and 'list'
+
+# print(lst<=lst)   # True
+
+# print(lst<lst)     #False
+
+## Indexing
+print(lst[0])      # 10
+print(lst[-1])     # 45.5
+print(lst[2])      # rohit
+
+## slicing
+print(lst[::])        #[10, 20, 'rohit', 45.5]
+print(lst[::-1])      #[45.5, 'rohit', 20, 10]
+
+
+#----------------------- Tuple ---------------------
+
+# tuple is Immutable Type.
+# Immutable means we can't add ,upadte ,delete elements after tuple creation.
+# Duplicates are allowed.
+# Tuple is heterogeneous type ,it means allows diff dattaype data in tuple.
+# Insertion order is preserved.
+# Indexing allowed.
+# Slicing allowed.
+# Tuple Should be enclosed within Parenthesis ().
+
+tpl = (10,24,"Rohit",True,10)
+print(tpl)     #(10, 24, 'Rohit', True, 10)
+
+#adding new value  #but tuple is immutable
+# tpl.append(10.4)     #AttributeError: 'tuple' object has no attribute 'append'
+
+# #Indexing
+# print(tpl[1])   #24
+# print(tpl[-3])   #Rohit
+
+# #Slicing
+# print(tpl[::])    #(10, 24, 'Rohit', True, 10)
+# print(tpl[::-1])  #(10, True, 'Rohit', 24, 10)
+
+# print(tpl*3)    #(10, 24, 'Rohit', True, 10, 10, 24, 'Rohit', True, 10, 10, 24, 'Rohit', True, 10)
+
+# print(tpl*tpl)   #TypeError: can't multiply sequence by non-int of type 'tuple'
+
+print(tpl+tpl)    #(10, 24, 'Rohit', True, 10, 10, 24, 'Rohit', True, 10)
+
+
+#---------------- Range ------------------
+
+#range Data Type represents a sequence of numbers.
+#range datatype is Immutable.
+#we can't add,upated,delete elements in range.
+#duplicates are not allowed
+#Indexing allowed
+#slicing allowed
+
+r = range(10)
+# print(r)     #range(0, 10)
+
+# for i in range(10):
+#     print(i, end = " ")     #0 1 2 3 4 5 6 7 8 9
+    
+# for k in range(0:20:2):     
+#     print(k , end = " ")    #SyntaxError: invalid syntax
+    
+for k in range(0,20,2):     
+    print(k , end = " ")    # 0 2 4 6 8 10 12 14 16 18 
+
+print(r[3])    #3
+print(r[0:11])   #range(0, 10)
+
+print(range(a,m))  #NameError: name 'a' is not defined
+
+
+#--------------------- Set --------------------
+
+# set is Mutable datatype.
+# we can add elements but we can't update elememnts
+# insertion order is not preserved.
+#duplicates not allowed.
+# heterogenious are allowed
+#unorder elements.
+#no indexing
+# no slicing
+
+s = {10,12.4,"Rohit",2,33}
+# print(type(s))    #<class 'set'>
+
+# print(s)   #{33, 2, 10, 'Rohit', 12.4}   #insertion order not preserved.
+
+# print(s[2])    #TypeError: 'set' object is not subscriptable
+
+# s[2] ="msr"   #TypeError: 'set' object does not support item assignment
+
+# s.add(10)
+# print(s)   #duplicate values not updatating
+
+s.add("Msr")
+print(s)   #{33, 2, 'Msr', 10, 12.4, 'Rohit'}   #un-order
+
+
+##------------------- Frozenset ------------------------
+
+#frozenset is immutable.
+# we cant add or remeve elements.
+# duuplicates are not allowed.
+# hetergenious type.
+#no indexing.
+# no slicing.
+# insertion order not preserved.
+
+s ={10,20,30,40}
+# print(type(s))
+
+f = frozenset(s)   #<class 'set'>
+# print(type(f))    #<class 'frozenset'>
+# print(f)    #frozenset({40, 10, 20, 30})
+
+# for i in f:
+#     print(i, end = " ")    #40 10 20 30 
+
+print(f.add(35))    #AttributeError: 'frozenset' object has no attribute 'add'
+
+##-------------------- Dict Datatype ----------------
+
+#represent a group of values as key-value pairs
+# Keys always unique , not duplicate
+# values can be duplicated.
+# dict is mutable , order is not preserved
+
+d = {}
+# print(type(d))    #<class 'dict'>
+
+# d["a"]= 100
+# d["a"] = 200
+# print(d)      #{'a': 200}
+# d[10] = "Rohit"
+# d[11] = "Msr"
+# d[12] = "Rohit"
+# print(d)           #{'a': 200, 10: 'Rohit', 11: 'Msr', 12: 'Rohit'}
+
+# print(d[0])    #KeyError: 0
+
+
+#------------------- Bytes --------------------
+
+#byte is immutable , does not modifying after creation.
+#bytes data type represent a group of byte numbers.
+#byte data type allowed only 0 to 256.
+#other than 256 will get error.
+#duplicates are allowed.
+
+
+s= [10,29,30,True,10]
+b = bytes(s)
+# print(type(b))    #<class 'bytes'>
+# print(b)   #b'\n\x1d\x1e\x01\n'
+# print(b[2])  #30
+# print(b[:3])  #b'\n\x1d\x1e'
+
+for i in b:
+    print(i ,end= " ")   #10 29 30 1 10 
+
+# b.append(10)  #AttributeError: 'bytes' object has no attribute 'append'
+# b.add(20)    #AttributeError: 'bytes' object has no attribute 'add'
+
+# s= [10,29,30,True,10,"m"]
+# b = bytes(s)   #TypeError: 'str' object cannot be interpreted as an integer
+
+
+#--------------- ByteArray ------------------------
+
+#Bytearray is mutable , we can modify.
+#bytearray allows duplicates.
+
+#byte data type allowed only 0 to 256.
+#other than 256 will get error.
+#indexing allows.
+
+
+s=[10,122,10]
+ba = bytearray(s)
+# print(type(s))    #<class 'list'>
+# print(type(ba))   #<class 'bytearray'>
+
+ba[1] = 22
+# print(ba)   #bytearray(b'\n\x16\n')
+# ba[3] = 55  #IndexError: bytearray index out of range
+ba.append(43)
+
+# for i in ba:
+#     print(i, end= " ")    #10 22 10 43 
+    
+# print(ba[-1]) #-43
+# print(ba[::])    #bytearray(b'\n\x16\n+')
+
+# for i in ba[:2]:
+#     print(ba, end= " ")   #bytearray(b'\n\x16\n+') bytearray(b'\n\x16\n+')
+
+# ba.append(257)   #ValueError: byte must be in range(0, 256)
+
+# ba.append("Rohit")    #TypeError: 'str' object cannot be interpreted as an integer
+
+print(ba[-3])   #10
+
+# for i in ba:
+#     print(i, end= " ")      #10 22 10 43 43 
+
+
+
